@@ -1,0 +1,54 @@
+/* Estilos para a página "Sobre a empresa" */
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.about-page h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-page h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about-page p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+.about-page .highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.about-page .team {
+  margin-top: 40px;
+}
+
+.about-page .team .member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-page .team .member img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.about-page .team .member .name {
+  font-weight: bold;
+}
+
+/* Estilos adicionais conforme necessário */

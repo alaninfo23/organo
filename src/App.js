@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner";
+import Menu from "./componentes/Menu";
 import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
+import Sobre from "./componentes/Sobre";
 
 function App() {
   
@@ -42,20 +44,37 @@ function App() {
       corPrimaria: "#FF8A29",
       corSecundaria: "#FFEEDF",
     },
+    {
+      nome: "Quality Assurance",
+      corPrimaria: "#FFBA05",
+      corSecundaria: "#FFF5D9",
+    },
+    {
+      nome: "Test Automation",
+      corPrimaria: "#57C278",
+      corSecundaria: "#D9F7E9",
+    },
+    {
+      nome: "IT Support",
+      corPrimaria: "#82CFFA",
+      corSecundaria: "#E8F8FF",
+    }
   ];
 
   const [colaboradores, setColaboradores] = useState([]);
-  debugger
+
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
   };
 
   return (
     <div className="App">
+      <Menu home='Home' sobre='Sobre' contato='Contato' solucoes='Soluções'/>
       <Banner />
+      <Sobre />
       <Formulario
         times={times.map(time => time.nome)}
-        data-testid='form'
+        testid='form'
         aoColaboradorCadastrado={(colaborador) =>
           aoNovoColaboradorAdicionado(colaborador)
         }
@@ -68,7 +87,7 @@ function App() {
       corSecundaria={time.corSecundaria}
       colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       /> )}
-      <Rodape />
+      <Rodape link1='facebook' link2='instagram' link3='linkedin' telefone='89999796654'/>
      
 
     </div>
