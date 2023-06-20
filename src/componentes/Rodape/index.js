@@ -6,17 +6,17 @@ const Rodape = (props) => {
       <section>
         <ul>
           <li>
-            <a href={`https://www.${props.link1}.com`} target="_blank">
+            <a href={`https://www.${props.link1}.com`} target="_blank" data-testid='FACEBOOK_LINK'>
               <img src="imagens/fb.png" alt="" />
             </a>
           </li>
           <li>
-            <a href={`https://www.${props.link2}.com`} target="_blank">
+            <a href={`https://www.${props.link2}.com`} target="_blank" data-testid='INSTAGRAM_LINK'>
               <img src="/imagens/instagram.png" alt="" />
             </a>
           </li>
           <li>
-            <a href={`https://www.${props.link3}.com`} target="_blank">
+            <a href={`https://www.${props.link3}.com`} target="_blank" data-testid='LINKEDIN_LINK'>
               <img src="/imagens/lnkd.png" alt="" />
             </a>
           </li>
@@ -35,7 +35,7 @@ const Rodape = (props) => {
             <a>Fale conosco</a>
             <a
               href={`https://wa.me/${props.telefone}?text=Ol%C3%A1%2C+gostaria+de+saber+mais...`}
-              target="_blank"
+              target="_blank" data-testid='WHATSAPP_LINK'
             >
               <img src="imagens/whats.png" alt="" />
             </a>

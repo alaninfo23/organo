@@ -14,7 +14,7 @@ const Colaborador = ({ nome, imagem, cargo, corDeFundo, linkedin }) => {
         <h4>{nome}</h4>
         <h5>{cargo}</h5>
         <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
-          <small>{linkedinLink}</small>
+        <small>{linkedinLink}</small>
         </a>
       </div>
     </div>

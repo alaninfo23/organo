@@ -16,7 +16,8 @@ const CampoTexto = (props) => {
                 value={props.valor} 
                 onChange={aoDigitado} 
                 required={props.obrigatorio} 
-                placeholder={placeholderModificada} 
+                placeholder={placeholderModificada}
+                data-testid={props.testId}
             />
         </div>
     )
