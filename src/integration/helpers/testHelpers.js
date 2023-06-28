@@ -1,12 +1,54 @@
+export const MENU_LIST_ID = "MENU_LIST";
+export const MENU_BUTTON_ITEM_HOME_ID = "MENU_BUTTON_ITEM_Home";
+export const MENU_BUTTON_ITEM_SOBRE_ID = "MENU_BUTTON_ITEM_Sobre";
+export const MENU_BUTTON_ITEM_SOLUCOES_ID = "MENU_BUTTON_ITEM_Solucoes";
+export const MENU_BUTTON_ITEM_PRODUTOS_ID = "MENU_BUTTON_ITEM_Produtos";
+export const MENU_BUTTON_ITEM_CONTATO_ID = "MENU_BUTTON_ITEM_Contato";
 
-export const INPUT_NAME_ID = 'INPUT_NAME';
-export const INPUT_CARGO_ID = 'INPUT_CARGO ';
-export const INPUT_IMAGE_ID = 'INPUT_IMAGE';
-export const INPUT_LINKEDIN_ID = 'INPUT_LINKEDIN';
-export const INPUT_SELECT_ID = 'SELECT_TIME';
-export const BUTTON_CREATE_CARD_ID = 'BUTTON_CREATE_CARD';
+export const BANNER_TOP_ID = "BANNER_TOP";
+export const SOBRE_ID = "SOBRE";
 
-export const FACEBOOK_LINK_ID = 'FACEBOOK_LINK'
-export const INSTAGRAM_LINK_ID = 'INSTAGRAM_LINK'
-export const LINKEDIN_LINK_ID = 'LINKEDIN_LINK'
-export const WHATSAPP_LINK_ID = 'WHATSAPP_LINK'
+export const FORMS_COLABORADOR_ID = "FORMS_COLABORADOR";
+export const CAMPO_TEXTO_NOME_ID = "CAMPO_TEXTO_Nome";
+export const CAMPO_TEXTO_CARGO_ID = "CAMPO_TEXTO_Cargo";
+export const CAMPO_TEXTO_IMAGEM_ID = "CAMPO_TEXTO_Imagem";
+export const CAMPO_TEXTO_LINKEDIN_ID = "CAMPO_TEXTO_Linkedin";
+
+export const LISTA_SUSPENSA_ID = "LISTA_SUSPENSA";
+export const LISTA_SUSPENSA_PROGRAMACAO_ID = "LISTA_SUSPENSA_Programação";
+export const LISTA_SUSPENSA_FRONT_END_ID = "LISTA_SUSPENSA_Front-End";
+export const LISTA_SUSPENSA_DATA_SCIENSE_ID = "LISTA_SUSPENSA_Data Sciense";
+export const LISTA_SUSPENSA_DEVOPS_ID = "LISTA_SUSPENSA_Devops";
+export const LISTA_SUSPENSA_UX_DESIGN_ID = "LISTA_SUSPENSA_UX e Design";
+export const LISTA_SUSPENSA_MOBILE_ID = "LISTA_SUSPENSA_Mobile";
+export const LISTA_SUSPENSA_INOVACAO_ID = "LISTA_SUSPENSA_Inovação e Gestão";
+export const LISTA_SUSPENSA_QUALITY_ASSURANCE_ID =
+  "LISTA_SUSPENSA_Quality Assurance";
+export const LISTA_SUSPENSA_TEST_AUTOMATION_ID =
+  "LISTA_SUSPENSA_Test Automation";
+export const LISTA_SUSPENSA_IT_SUPPORT_ID = "LISTA_SUSPENSA_IT Support";
+
+export const BUTTON_CREATE_CARD_ID = "BUTTON_CREATE_CARD";
+
+export const TIME_ADD_ID = "TIME_ADD";
+export const TIME_ADD_PROGRAMACAO_ID = "TIME_ADD_Programação";
+export const TIME_ADD_FRONT_END_ID = "TIME_ADD_Front-End";
+export const TIME_ADD_DATA_SCIENSE_ID = "TIME_ADD_Data Sciense";
+export const TIME_ADD_DEVOPS_ID = "TIME_ADD_Devops";
+export const TIME_ADD_UX_DESIGN_ID = "TIME_ADD_UX e Design";
+export const TIME_ADD_MOBILE_ID = "TIME_ADD_Mobile";
+export const TIME_ADD_INOVACAO_ID = "TIME_ADD_Inovacão e Gestão";
+export const TIME_ADD_QUALITY_ASSURANCE_ID = "TIME_ADD_Quality Assurance";
+export const TIME_ADD_TEST_AUTOMATION_ID = "TIME_ADD_Test Automation";
+export const TIME_ADD_IT_SUPPORT_ID = "TIME_ADD_IT Support";
+
+export const COLABORADOR_ADD_ID = "COLABORADOR_ADD";
+export const COLABORADOR_NOME_ALAN_SANTOS_ID = "COLABORADOR_NOME_Alan Santos";
+export const COLABORADOR_CARGO_QA_ID = "COLABORADOR_CARGO_QA";
+export const COLABORADOR_IMAGEM_ALANINFO23_ID = "COLABORADOR_IMAGEM_alaninfo23";
+export const COLABORADOR_LINKEDIN_ALANINFO23_ID = 'COLABORADOR_LINKEDIN_https://www.linkedin.com/in/alaninfo23'
+export const FOOTER_ID = "FOOTER";
+export const FACEBOOK_LINK_ID = "FACEBOOK_LINK";
+export const INSTAGRAM_LINK_ID = "INSTAGRAM_LINK";
+export const LINKEDIN_LINK_ID = "LINKEDIN_LINK";
+export const WHATSAPP_LINK_ID = "WHATSAPP_LINK";

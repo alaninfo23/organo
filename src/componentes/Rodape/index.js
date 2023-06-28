@@ -2,7 +2,7 @@ import "./Rodape.css";
 
 const Rodape = (props) => {
   return (
-    <footer className="footer">
+    <footer data-testid="FOOTER" className="footer">
       <section>
         <ul>
           <li>

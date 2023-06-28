@@ -2,7 +2,7 @@ import "./Sobre.css";
 
 function Sobre() {
   return (
-    <div className="about-page">
+    <div data-testid='SOBRE' className="about-page">
     <h1>Sobre a empresa</h1>
 
     <h2>História da empresa</h2>

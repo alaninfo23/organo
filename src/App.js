@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner";
-import Menu from "./componentes/Menu";
+import MenuList from "./componentes/MenuList";
 import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
@@ -69,8 +69,9 @@ function App() {
 
   return (
     <div className="App">
-      <Menu home='Home' sobre='Sobre' contato='Contato' solucoes='Soluções'/>
-      <Banner />
+      <MenuList buttons={["Home", "Sobre", "Produtos", "Contato"]} />
+      {/* <Menu home='Home' sobre='Sobre' contato='Contato' solucoes='Soluções'/> */}
+      <Banner/>
       <Sobre />
       <Formulario
         times={times.map(time => time.nome)}

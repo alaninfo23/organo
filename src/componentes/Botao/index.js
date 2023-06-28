@@ -2,7 +2,7 @@ import './Botao.css'
 
 const Botao = (props) => {
     return (
-        <button className="botao" data-testid={props["data-testid"]}>
+        <button className="botao" data-testid={props.testId}>
             {props.children}
         </button>
     )
