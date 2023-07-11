@@ -14,7 +14,9 @@ export const CAMPO_TEXTO_CARGO_ID = "CAMPO_TEXTO_Cargo";
 export const CAMPO_TEXTO_IMAGEM_ID = "CAMPO_TEXTO_Imagem";
 export const CAMPO_TEXTO_LINKEDIN_ID = "CAMPO_TEXTO_Linkedin";
 
-export const LISTA_SUSPENSA_ID = "LISTA_SUSPENSA";
+export const LISTA_SUSPENSA_TIME = "LISTA_SUSPENSA";
+export const LISTA_SUSPENSA_ID = (time) => `LISTA_SUSPENSA_${time}`;
+
 export const LISTA_SUSPENSA_PROGRAMACAO_ID = "LISTA_SUSPENSA_Programação";
 export const LISTA_SUSPENSA_FRONT_END_ID = "LISTA_SUSPENSA_Front-End";
 export const LISTA_SUSPENSA_DATA_SCIENSE_ID = "LISTA_SUSPENSA_Data Sciense";

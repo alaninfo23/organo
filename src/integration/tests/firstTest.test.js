@@ -15,17 +15,8 @@ import {
   CAMPO_TEXTO_CARGO_ID,
   CAMPO_TEXTO_IMAGEM_ID,
   CAMPO_TEXTO_LINKEDIN_ID,
+  LISTA_SUSPENSA_TIME,
   LISTA_SUSPENSA_ID,
-  LISTA_SUSPENSA_PROGRAMACAO_ID,
-  LISTA_SUSPENSA_FRONT_END_ID,
-  LISTA_SUSPENSA_DATA_SCIENSE_ID,
-  LISTA_SUSPENSA_DEVOPS_ID,
-  LISTA_SUSPENSA_UX_DESIGN_ID,
-  LISTA_SUSPENSA_MOBILE_ID,
-  LISTA_SUSPENSA_INOVACAO_ID,
-  LISTA_SUSPENSA_QUALITY_ASSURANCE_ID,
-  LISTA_SUSPENSA_TEST_AUTOMATION_ID,
-  LISTA_SUSPENSA_IT_SUPPORT_ID,
   BUTTON_CREATE_CARD_ID,
   TIME_ADD_ID,
   TIME_ADD_PROGRAMACAO_ID,
@@ -54,15 +45,16 @@ import {
   BUTTON_SOBRE,
   BUTTON_PRODUTOS,
   BUTTON_CONTATO,
-  CAMPO_NOME,
+  LABEL_NOME,
   PLACEHOLDER_NOME,
-  CAMPO_CARGO,
+  LABEL_CARGO,
   PLACEHOLDER_CARGO,
-  CAMPO_IMAGEM,
+  LABEL_IMAGEM,
   PLACEHOLDER_IMAGEM,
-  CAMPO_LINKEDIN,
+  LABEL_LINKEDIN,
   PLACEHOLDER_LINKEDIN,
-  SELECT_TIME,
+  LABEL_TIME,
+  PLACEHOLDER_SELECT_TIME,
   BUTTON_CRIAR_CARD,
 } from "../strings/testStrings";
 
@@ -92,31 +84,46 @@ describe("User should be able", () => {
     render(<App />);
     const formUser = within(screen.getByTestId(FORMS_COLABORADOR_ID));
 
+    const labelName = formUser.getByText(LABEL_NOME);
+    expect(labelName).toBeInTheDocument();
+
     const inputName = formUser.getByTestId(CAMPO_TEXTO_NOME_ID);
     expect(inputName).toBeInTheDocument();
+    
+    const placeholderName = formUser.getByPlaceholderText(PLACEHOLDER_NOME);
+    expect(placeholderName).toBeInTheDocument();
 
-    const labelName = formUser.getByText(CAMPO_NOME);
-    expect(labelName).toBeInTheDocument();
+    const labelCargo = formUser.getByText(LABEL_CARGO);
+    expect(labelCargo).toBeInTheDocument();
+
+    const placeholderCargo = formUser.getByPlaceholderText(PLACEHOLDER_CARGO);
+    expect(placeholderCargo).toBeInTheDocument();
 
     const inputCargo = formUser.getByTestId(CAMPO_TEXTO_CARGO_ID);
     expect(inputCargo).toBeInTheDocument();
 
-    const labelCargo = formUser.getByText(CAMPO_CARGO);
-    expect(labelCargo).toBeInTheDocument();
+    const labelImage = formUser.getByText(LABEL_IMAGEM);
+    expect(labelImage).toBeInTheDocument();
+
+    const placeholderImage = formUser.getByPlaceholderText(PLACEHOLDER_IMAGEM);
+    expect(placeholderImage).toBeInTheDocument();
 
     const inputImage = formUser.getByTestId(CAMPO_TEXTO_IMAGEM_ID);
     expect(inputImage).toBeInTheDocument();
 
-    const labelImage = formUser.getByText(CAMPO_IMAGEM);
-    expect(labelImage).toBeInTheDocument();
+    const labelLinkedin = formUser.getByText(LABEL_LINKEDIN);
+    expect(labelLinkedin).toBeInTheDocument();
+
+    const placeholderLinkedin = formUser.getByPlaceholderText(PLACEHOLDER_LINKEDIN);
+    expect(placeholderLinkedin).toBeInTheDocument();
 
     const inputLinkedin = formUser.getByTestId(CAMPO_TEXTO_LINKEDIN_ID);
     expect(inputLinkedin).toBeInTheDocument();
 
-    const labelLinkedin = formUser.getByText(CAMPO_LINKEDIN);
-    expect(labelLinkedin).toBeInTheDocument();
+    const labelselectTime = formUser.getByText(LABEL_TIME);
+    expect(labelselectTime).toBeInTheDocument();
 
-    const selectTime = formUser.getByTestId(LISTA_SUSPENSA_ID);
+    const selectTime = formUser.getByTestId(LISTA_SUSPENSA_TIME);
     expect(selectTime).toBeInTheDocument();
 
     const options = [
@@ -172,7 +179,7 @@ describe("User should be able", () => {
     expect(whatsappLink).toBeInTheDocument();
   });
 
-  it.only("possible to create a card", async () => {
+  it("possible to create a card", async () => {
     render(<App />);
     const formUser = within(screen.getByTestId(FORMS_COLABORADOR_ID));
 
@@ -180,7 +187,7 @@ describe("User should be able", () => {
     const inputCargo = formUser.getByTestId(CAMPO_TEXTO_CARGO_ID);
     const inputImage = formUser.getByTestId(CAMPO_TEXTO_IMAGEM_ID);
     const inputLinkedin = formUser.getByTestId(CAMPO_TEXTO_LINKEDIN_ID);
-    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_ID);
+    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_TIME);
     const buttonCreateCard = formUser.getByTestId(BUTTON_CREATE_CARD_ID);
 
     userEvent.type(inputName, "Alan Santos");
@@ -234,7 +241,7 @@ describe("User should be able", () => {
 
     const inputName = formUser.getByTestId(CAMPO_TEXTO_NOME_ID);
     const inputCargo = formUser.getByTestId(CAMPO_TEXTO_CARGO_ID);
-    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_ID);
+    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_TIME);
     const buttonCreateCard = formUser.getByTestId(BUTTON_CREATE_CARD_ID);
 
     userEvent.type(inputName, "Alan Santos");
@@ -274,7 +281,7 @@ describe("User should be able", () => {
     const inputName = formUser.getByTestId(CAMPO_TEXTO_NOME_ID);
     const inputCargo = formUser.getByTestId(CAMPO_TEXTO_CARGO_ID);
     const inputImage = formUser.getByTestId(CAMPO_TEXTO_IMAGEM_ID);
-    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_ID);
+    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_TIME);
     const buttonCreateCard = formUser.getByTestId(BUTTON_CREATE_CARD_ID);
 
     userEvent.type(inputName, "Alan Santos");
@@ -317,14 +324,14 @@ describe("User should be able", () => {
     });
   });
 
-  it.skip("it should not be possible to create a card without filling in the name", async () => {
+  it("it should not be possible to create a card without filling in the name", async () => {
     render(<App />);
     const formUser = within(screen.getByTestId(FORMS_COLABORADOR_ID));
     //const inputName = formUser.getByTestId(CAMPO_TEXTO_NOME_ID);
     const inputCargo = formUser.getByTestId(CAMPO_TEXTO_CARGO_ID);
     const inputImage = formUser.getByTestId(CAMPO_TEXTO_IMAGEM_ID);
     const inputLinkedin = formUser.getByTestId(CAMPO_TEXTO_LINKEDIN_ID);
-    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_ID);
+    const inputSelect = formUser.getByTestId(LISTA_SUSPENSA_TIME);
     const buttonCreateCard = formUser.getByTestId(BUTTON_CREATE_CARD_ID);
 
     //userEvent.type(inputName, "Alan Santos");
